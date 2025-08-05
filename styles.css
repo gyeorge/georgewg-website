@@ -286,22 +286,71 @@ nav a:hover {
     font-size: 0.9rem;
 }
 
-/* Responsive design for reading list */
+/* Responsive design */
 @media (max-width: 768px) {
     body {
         padding: 1rem;
-        font-size: 15px;
+        font-size: 14px;
+        max-width: 100%;
+    }
+    
+    .container {
+        padding: 0;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .profile-image {
+        max-width: 90%;
+        margin: 0 auto 1rem auto;
     }
     
     .text-nav-container {
         flex-direction: column;
         gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .text-nav-container h1 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .separator {
+        display: none;
     }
     
     nav {
+        flex-direction: column;
         gap: 0.5rem;
     }
-
+    
+    nav a {
+        font-size: 0.9rem;
+    }
+    
+    .about-content {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    
+    .about-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .about-nav {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .reading-list-content {
+        padding-top: 1rem;
+        max-width: 100%;
+    }
+    
     .reading-columns {
         flex-direction: column;
         gap: 2rem;
@@ -309,5 +358,21 @@ nav a:hover {
     
     .reading-column {
         width: 100%;
+    }
+    
+    .reading-column h2 {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .book-placeholder {
+        min-height: 150px;
+    }
+    
+    .back-nav {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 } 
