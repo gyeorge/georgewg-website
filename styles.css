@@ -14,20 +14,32 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 2rem;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 100vh;
 }
 
 .container {
-    width: 100%;
-    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+    text-align: left;
 }
 
 /* Main content */
 main {
-    margin-bottom: 2rem;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-section {
@@ -43,47 +55,27 @@ main {
 
 .text-nav-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
-h1 {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 1rem;
-    font-weight: normal;
-    margin: 0;
-    font-style: italic;
-}
-
 .separator {
-    display: none;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-nav a {
     font-family: "Times New Roman", Times, serif;
-    color: #000;
-    text-decoration: underline;
     font-size: 1rem;
+    color: #000;
 }
 
-nav a:hover {
-    opacity: 0.7;
+.intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 /* About page specific styles */
 .about-content {
     text-align: center;
     max-width: 500px;
-    margin: 0 auto;
 }
 
 .about-content p {
@@ -100,23 +92,147 @@ nav a:hover {
 
 .about-nav {
     margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
+    text-align: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .about-nav a {
     font-family: "Times New Roman", Times, serif;
     color: #000;
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 1rem;
 }
 
 .about-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
+    font-family: "Times New Roman", Times, serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Page content styles */
+.page-content {
+    margin-bottom: 2rem;
+}
+
+.page-content h2 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+}
+
+.page-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.page-content ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.page-content li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.page-content li:before {
+    content: "—";
+    margin-right: 0.5rem;
+    margin-left: -1rem;
+}
+
+/* Essays and Library specific styles */
+.essay-item, .book-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.essay-item:last-child, .book-item:last-child {
+    border-bottom: none;
+}
+
+.essay-title, .book-title {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.essay-date, .book-author {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.essay-excerpt, .book-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Back navigation */
+.back-nav {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.back-nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.back-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Essays page specific styles */
+.essays-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-top: 4rem;
+    text-align: center;
+}
+
+.essay-link {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+    color: #000;
+    text-decoration: underline;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    transition: opacity 0.2s ease;
+}
+
+.essay-link:hover {
     opacity: 0.7;
+}
+
+.essay-link:last-child {
+    margin-bottom: 0;
 }
 
 /* Reading List page specific styles */
@@ -125,6 +241,7 @@ nav a:hover {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding-top: 2rem;
 }
 
 .reading-columns {
@@ -169,114 +286,20 @@ nav a:hover {
     font-size: 0.9rem;
 }
 
-/* Back navigation */
-.back-nav {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.back-nav a {
-    font-family: "Times New Roman", Times, serif;
-    color: #000;
-    text-decoration: underline;
-    font-size: 1rem;
-}
-
-.back-nav a:hover {
-    opacity: 0.7;
-}
-
-/* Mobile responsive design */
+/* Responsive design */
 @media (max-width: 768px) {
     body {
         padding: 1rem;
-        font-size: 16px;
-        max-width: 100%;
-        margin: 0;
-    }
-    
-    .container {
-        padding: 0;
-    }
-    
-    .profile-image {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        margin-bottom: 1.5rem;
+        font-size: 15px;
     }
     
     .text-nav-container {
-        gap: 1rem;
-    }
-    
-    h1 {
-        font-size: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
     }
     
     nav {
-        gap: 0.5rem;
-    }
-    
-    nav a {
-        font-size: 1rem;
-    }
-    
-    .about-content {
-        padding: 0;
-        max-width: 100%;
-    }
-    
-    .about-content p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .about-nav {
-        margin-top: 2rem;
-        padding-top: 2rem;
-        gap: 0.5rem;
-    }
-    
-    .about-nav a {
-        font-size: 1rem;
-    }
-    
-    .reading-list-content {
-        padding: 0;
-        max-width: 100%;
-    }
-    
-    .reading-columns {
         flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .reading-column {
-        width: 100%;
-    }
-    
-    .reading-column h2 {
-        font-size: 1.3rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .book-placeholder {
-        min-height: 120px;
-    }
-    
-    .back-nav {
-        margin-top: 2rem;
-        padding-top: 2rem;
         gap: 0.5rem;
-    }
-    
-    .back-nav a {
-        font-size: 1rem;
     }
 } 
