@@ -161,13 +161,13 @@ nav a:hover {
 }
 
 /* Essays and Library specific styles */
-.essay-item, .book-item {
+.essay-item {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #eee;
 }
 
-.essay-item:last-child, .book-item:last-child {
+.essay-item:last-child {
     border-bottom: none;
 }
 
@@ -191,7 +191,6 @@ nav a:hover {
 .back-nav {
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid #eee;
 }
 
 .back-nav a {
@@ -235,37 +234,52 @@ nav a:hover {
     margin-bottom: 0;
 }
 
-/* Reading List page specific styles */
-.reading-list-content {
+/* Reading page specific styles */
+.reading-simple-content {
     text-align: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 400px;
     margin: 0 auto;
-    padding-top: 2rem;
+    padding-top: 3rem;
 }
 
-.reading-columns {
+.book-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    gap: 3rem;
-    margin-bottom: 2rem;
+    gap: 2rem;
+    width: 100%;
 }
 
-.reading-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.reading-column h2 {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 1.25rem;
-    font-weight: normal;
-    margin-bottom: 2rem;
-    color: #000;
+.book-item {
     text-align: center;
+    max-width: 120px;
+}
+
+.book-item img {
+    width: 105px !important;
+    height: 158px; /* 2:3 ratio to match typical book cover */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.book-item img:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.book-item .book-title {
+    margin-top: 0.3rem;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 0.8rem;
+    color: #333;
+    line-height: 1.2;
 }
 
 .book-placeholder {
